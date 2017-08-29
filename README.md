@@ -8,32 +8,35 @@
 ## Quick Start Guide
 post with form-data:
 1. http://127.0.0.1:8099/filter/upload
+
 file: upload a text file with keys line by line
 level: all the keys restrict level in the file, a int value
 
 2. http://127.0.0.1:8099/filter/delete
+
 key: the key you want to delete
 
 3. http://127.0.0.1:8099/filter/search_all
+
 content
 Return
 ```
 [
     {
         "head": 0, // The dirty word start position
-        "tail": 3, // Dirty word length
+        "length": 3, // Dirty word length
         "level": 1 // Dirty level
     },
     {
         "head": 4,
-        "tail": 3,
+        "length": 3,
         "level": 1
     }
 ]
 ```
 
-### Build the lib yourself #OPTIONAL#
-I have already build the libdatrie and put files need into the project and nothing more you need to do. If you want to build the trie tree library yourself, download from the web and follow its ReadMe:
+### Build the lib yourself on different platform #NOTICE#
+I have already build the libdatrie and put files need into the project on Mac OSX. If you put the project on Linux, you should build the trie tree library on linux, download from the web and follow its ReadMe:
 $ LIB_PATH = XXX/lib_path
 $ tar zxvf libdatrie-0.2.5.tar.gz
 $ cd libdatrie-0.2.5
